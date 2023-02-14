@@ -1,4 +1,10 @@
+/*
+what this file do: 
 
+Creating navbar on the top of the site .
+See if the user scroll.
+Forming how the navbar is working with btn's and link.
+*/
 import {Navbar, Container} from "react-bootstrap";
 import { useState } from "react";
 
@@ -30,7 +36,7 @@ export const NavBar = () =>
     {
         setActiveLink(value)
     }
-    
+
         return (
             <Navbar expand="lg" className = {scrolled ? "scrolled": ""}>
             <Container>
@@ -43,10 +49,16 @@ export const NavBar = () =>
                 <Nav className="me-auto">
 
     //Add links to the top navbar
-                    <Nav.Link href="#home" className = {activeLink === 'home' ? 'active navbar-link' : 'navbar-link'}onClick = {() => onUpdateActiveLink('home')}>Home</Nav.Link>
-                    <Nav.Link href="#Skills" className = {activeLink === 'Skills' ? 'active navbar-link' : 'navbar-link'}onClick = {() => onUpdateActiveLink('Skills')}>Skills</Nav.Link>  
-                    <Nav.Link href="#Projects" className = {activeLink === 'Projects' ? 'active navbar-link' : 'navbar-link'}onClick = {() => onUpdateActiveLink('Projects')}>Projects</Nav.Link>
+                    <Nav.Link href="#home" className = {activeLink === 'home' ? 'active navbar-link' : 'navbar-link'} //home
+                        onClick = {() => onUpdateActiveLink('home')}>Home</Nav.Link>
+
+                    <Nav.Link href="#Skills" className = {activeLink === 'Skills' ? 'active navbar-link' : 'navbar-link'} // skills
+                        onClick = {() => onUpdateActiveLink('Skills')}>Skills</Nav.Link>  
+
+                    <Nav.Link href="#Projects" className = {activeLink === 'Projects' ? 'active navbar-link' : 'navbar-link'} //projects
+                        onClick = {() => onUpdateActiveLink('Projects')}>Projects</Nav.Link>
                 </Nav>
+
 
                 <span className ="navbarText">
                 <div className = "socialIcon">
