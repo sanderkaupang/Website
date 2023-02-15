@@ -7,6 +7,10 @@ Forming how the navbar is working with btn's and link.
 */
 import {Navbar, Container} from "react-bootstrap";
 import { useState } from "react";
+import logo from '../assets/img/logo.svg'
+import navIcon1 from '../assets/img/nav-_icon1.svg'
+import navIcon2 from '../assets/img/nav-_icon2.svg'
+import navIcon3 from '../assets/img/nav-_icon3.svg'
 
 export const NavBar = () => 
 {
@@ -34,14 +38,14 @@ export const NavBar = () =>
 
     const onUpdateActiveLink = (value) => 
     {
-        setActiveLink(value)
+        setActiveLink(value);
     }
 
         return (
             <Navbar expand="lg" className = {scrolled ? "scrolled": ""}>
             <Container>
                 <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
-                <img src = {''} alt = "logo" />
+                <img src = {'logo'} alt = "Logo" />
                 <Navbar.Toggle aria-controls="basic-navbar-nav">
                     <span className = "navbar-toggler-icon"></span>
                 </Navbar.Toggle>
@@ -63,9 +67,9 @@ export const NavBar = () =>
                 <span className ="navbarText">
                 <div className = "socialIcon">
     //Links to Socialmedia 
-                    <a href ="#"><img src={''} alt="" /></a>
-                    <a href ="#"><img src={''} alt="" /></a>
-                    <a href ="#"><img src={''} alt="" /></a>
+                    <a href ="#"><img src={'navIcon1'} alt="" /></a>
+                    <a href ="#"><img src={'navIcon2'} alt="" /></a>
+                    <a href ="#"><img src={'navIcon3'} alt="" /></a>
                 </div>
                 <button className = "contacktMe" onClick={() => console.log('connect')}
                     ><span>Let's connect</span></button>
